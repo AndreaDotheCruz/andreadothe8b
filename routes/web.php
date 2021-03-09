@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ListaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,5 @@ return view('datos');
 Route::get('/estudiantes','App\Http\Controllers\ControllerEstudiantes@mostrar');
 Route::post('/estudiantes','App\Http\Controllers\ControllerEstudiantes@store')->name('estudiantes.store');
 Route::resource('/Lista', App\Http\Controllers\ListaController::class);
+Route::delete('Lista/{matricula}', 'ListaController@destroy')->name('Lista.destroy');
+Route::get('destroy', [ListaController::class, 'destroy']);

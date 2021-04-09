@@ -6,7 +6,7 @@ class estudiantes extends Model
 {
 protected $table ='estudiantes';  
 protected $primaryKey="Matricula";
-protected$fillable = [
-	'Nombre','Direccion','created_at','updated_at'
+protected $fillable = [
+	"Id", 'Nombre','Direccion','created_at','updated_at'
 	];  
 }

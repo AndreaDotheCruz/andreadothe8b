@@ -19,7 +19,6 @@ class ListaController extends Controller
         $estudiante=DB::table('estudiantes')->select('Matricula', 'Nombre', 'Direccion')->where('Nombre','like',"%$texto%")->paginate(10);
         return view ('VistaEstudiantes', compact('estudiante'));
     }
-
     public function destroy($Id)
     {
         $estudiante= estudiantes::find($Id);
@@ -27,5 +26,21 @@ class ListaController extends Controller
         $estudiante->delete();
         return redirect()->route('Lista.index');
     }
+    public function edit($Matricula)
+    {
+        $estudiante = estudiantes::whereMatricula($Matricula)->firstOrFail();
+        return view ('EditaEstudiante', compact('estudiante'));
+    }
+
+    public function update(Request $request, $Id)
+    {
+        $estudiante= estudiantes::findOrFail($Id);
+        $estudiante->Matricula = $request->input('Matricula');
+        $estudiante->Nombre =$request->input('Nombre');
+        $estudiante->Direccion =$request->input('Direccion');
+        $estudiante->save();
+        return redirect()->route('Lista.index');
+    }
+        
 
 }

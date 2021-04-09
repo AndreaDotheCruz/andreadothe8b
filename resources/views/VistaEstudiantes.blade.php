@@ -22,7 +22,6 @@
         </div>
         </div>
         </form>
-
 </div-class-col>
            <div class="row">
              <div class="col-xl-12">
@@ -34,6 +33,7 @@
                          <th> Nombre</th>
                          <th> Dirección </th>
                          <th> Acciones </th>
+                         <th></th>
                          </tr>
                      </thead>
                      <tbody>
@@ -42,7 +42,10 @@
                      <td>{{$estudiantes->Matricula}}</td>
                      <td>{{$estudiantes->Nombre}}</td>
                      <td>{{$estudiantes->Direccion}}</td>
-                     <td> Editar|<form method="POST" action ="{{url("Lista/{$estudiantes->Matricula}")}}">
+                     <td>
+                      <a href="{{route ('Lista.edit', $estudiantes->Matricula)}}" class="btn btn-primary btn-sm btn btn-warning btn-sm">Actualizar</a>
+                      </td>
+                     <td><form method="POST" action ="{{url("Lista/{$estudiantes->Matricula}")}}">
                      @csrf
                      @method('DELETE')
                      <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm ('¿Deseas borrar el registro?');">Eliminar</button>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\estudiantes;
 use Illuminate\Http\Request;
+use App\Http\Requests\validarUpdate;
+use App\Http\Requests\validarRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
@@ -32,7 +34,7 @@ class ListaController extends Controller
         return view ('EditaEstudiante', compact('estudiante'));
     }
 
-    public function update(Request $request, $Id)
+    public function update(validarUpdate $request, $Id)
     {
         $estudiante= estudiantes::findOrFail($Id);
         $estudiante->Matricula = $request->input('Matricula');

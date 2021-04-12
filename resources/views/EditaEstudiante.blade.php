@@ -15,6 +15,15 @@
 <div class="col">
 <h2>Editar estudiantes</h2>
 <form method="post" action="{{route ('Lista.update', $estudiante)}}" >
+                @if (count($errors) > 0)
+                  <div class="alert alert-danger">
+                   <ul>
+                     @foreach ($errors->all() as $error)
+                     <li>{{ $error }} </li>
+                      @endforeach 
+                   </ul>
+                  </div>
+               @endif
 @method('PATCH')
 <div class="form-group">
 <input type="text" name="Matricula" class="form-control" placeholder="Matricula" value="{{$estudiante->Matricula}}">

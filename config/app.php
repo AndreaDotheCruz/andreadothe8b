@@ -80,7 +80,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
+    //(es para español), cambiar "es" para cambiar el idioma, en para ingles.
 
     /*
     |--------------------------------------------------------------------------

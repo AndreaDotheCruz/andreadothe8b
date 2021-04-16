@@ -11,6 +11,14 @@
 <body>
      <div class="container">
         <h4>Lista de estudiantes</h4>
+        <div>
+        <a>
+        <form action="{{route('graficas1')}}" method= "get">
+        <input type="submit" value="Gráfica"  class="btn btn-primary">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        </form>
+        </div>
+        </a> <br>
         <div class="col-xl-12">
         <form action="{{route('Lista.index')}}" method= "get">
         <div class="form row">
@@ -18,7 +26,7 @@
         <input type="text" class="form-control" name="texto" id="texto">
         </div>
         <div class="col auto">
-        <input type="submit" class="btm btn-primary" value="Buscar">
+        <a><input type="submit" class="btn btn-primary" value="Buscar"></a>
         </div>
         </div>
         </form>
@@ -31,7 +39,7 @@
                          <tr>
                          <th> Matrícula</th>
                          <th> Nombre</th>
-                         <th> Edad </th>
+                         <th> Ingresos mensuales </th>
                          <th> Dirección </th>
                          <th> Acciones </th>
                          <th></th>

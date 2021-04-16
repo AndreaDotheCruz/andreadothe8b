@@ -40,7 +40,7 @@ class ListaController extends Controller
         $estudiante->Matricula = $request->input('Matricula');
         $estudiante->Nombre =$request->input('Nombre');
         $estudiante->Direccion =$request->input('Direccion');
-        //$estudiante->Edad =$request->input('Edad');
+        $estudiante->Edad =$request->input('Edad');
         $estudiante->save();
         return redirect()->route('Lista.index');
     }

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class grafica_sexo extends Controller
 {
-    public function index(){
+    public function chartjs(){
         $pastel=estudiantes::
         select(conut('Edad'))
         ->join('Edad')->get();

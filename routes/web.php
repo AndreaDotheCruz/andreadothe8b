@@ -31,7 +31,7 @@ Route::patch('Lista/{estudiante}/update', 'App\Http\Controllers\ListaController@
 
 Route::get('grafica', function(){
     return view('grafica');
-});
+})->name('graficas1');
 
 
 

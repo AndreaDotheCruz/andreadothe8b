@@ -32,11 +32,16 @@
 <input type="text" name="Nombre" class="form-control" placeholder="Nombre" value="{{$estudiante->Nombre}}">
 </div>
 <div class="form-group">
+<input type="text" name="Edad" class="form-control" placeholder="Edad" value="{{$estudiante->Edad}}">
+</div>
+<div class="form-group">
 <input type="text" name="Direccion" class="form-control" placeholder="Dirección" value="{{$estudiante->Direccion}}"></textarea>
 </div>
 <div class="form-group">
+<div>
 <input type="submit" value="Enviar" class="btn btn-primary">
 {{ csrf_field() }}</div>
+</div>
 </form>
 </div>
 </div>

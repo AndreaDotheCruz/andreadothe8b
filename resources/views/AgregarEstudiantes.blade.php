@@ -29,6 +29,9 @@
                     <input type="text" name="Nombre" class="form-control"placeholder="Escribe tu Nombre" value="{{ old('Nombre') }}">
                     </div>
                     <div class="form-group">
+                    <input type="text" name="Edad" class="form-control"placeholder="Escribe tu Edad" value="{{ old('Edad') }}">
+                    </div>
+                    <div class="form-group">
                     <textarea name="Direccion" class="form-control"placeholder="Escribe tu dirección" value="{{ old('Direccion') }}"></textarea>
                     </div>
                     <div class="form-group">

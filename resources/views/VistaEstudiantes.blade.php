@@ -31,6 +31,7 @@
                          <tr>
                          <th> Matrícula</th>
                          <th> Nombre</th>
+                         <th> Edad </th>
                          <th> Dirección </th>
                          <th> Acciones </th>
                          <th></th>
@@ -41,6 +42,7 @@
                      <tr>
                      <td>{{$estudiantes->Matricula}}</td>
                      <td>{{$estudiantes->Nombre}}</td>
+                     <td>{{$estudiantes->Edad}}</td>
                      <td>{{$estudiantes->Direccion}}</td>
                      <td>
                       <a href="{{route ('Lista.edit', $estudiantes->Matricula)}}" class="btn btn-primary btn-sm btn btn-warning btn-sm">Actualizar</a>

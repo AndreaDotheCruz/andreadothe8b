@@ -29,5 +29,9 @@ Route::delete('Lista/{matricula}', 'ListaController@destroy')->name('Lista.destr
 Route::get('Lista/{estudiante}/edit', 'ListaController@edit')->name('Lista.edit');
 Route::patch('Lista/{estudiante}/update', 'App\Http\Controllers\ListaController@update')->name('Lista.update');
 
+Route::get('grafica', function(){
+    return view('grafica');
+});
+
 
 

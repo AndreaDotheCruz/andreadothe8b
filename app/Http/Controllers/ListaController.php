@@ -18,7 +18,7 @@ class ListaController extends Controller
         //return $estudiante;
         
         $texto=trim($request->get('texto'));
-        $estudiante=DB::table('estudiantes')->select('Matricula', 'Nombre', 'Direccion')->where('Nombre','like',"%$texto%")->paginate(10);
+        $estudiante=DB::table('estudiantes')->select('Matricula', 'Nombre', 'Direccion', 'Edad')->where('Nombre','like',"%$texto%")->paginate(10);
         return view ('VistaEstudiantes', compact('estudiante'));
     }
     public function destroy($Id)
@@ -40,6 +40,7 @@ class ListaController extends Controller
         $estudiante->Matricula = $request->input('Matricula');
         $estudiante->Nombre =$request->input('Nombre');
         $estudiante->Direccion =$request->input('Direccion');
+        //$estudiante->Edad =$request->input('Edad');
         $estudiante->save();
         return redirect()->route('Lista.index');
     }

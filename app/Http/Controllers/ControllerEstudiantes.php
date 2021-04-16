@@ -15,6 +15,7 @@ class ControllerEstudiantes extends Controller
         $estudiantes=new estudiantes();
         $estudiantes->Matricula=$request->Matricula;
         $estudiantes->Nombre=$request->Nombre;
+        $estudiantes->Edad=$request->Edad;
         $estudiantes->Direccion=$request->Direccion;
         $estudiantes-> save();
         return redirect('estudiantes');
